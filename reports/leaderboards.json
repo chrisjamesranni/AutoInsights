@@ -1,0 +1,44 @@
+{
+    "Best Regressor": "TraditionalFamily",
+    "Best Regressor Type": "KNeighborsRegressor",
+    "Best Regressor R\u00b2": 0.9745936434853288,
+    "Best Classifier": "BayesSearch_SVM",
+    "Best Classifier Type": "SVC",
+    "Best Classifier Accuracy": 0.9820920977828311,
+    "Regression Results": {
+        "TraditionalFamily": {
+            "Regressor": "KNeighborsRegressor",
+            "RMSE": 5506.733321313023,
+            "MAE": 2964.112372382675,
+            "R2": 0.9745936434853288,
+            "Kernel": "N/A"
+        },
+        "SVR-Bayesian": {
+            "Regressor": "SVR",
+            "RMSE": 5533.405568100223,
+            "MAE": 3069.244957549897,
+            "R2": 0.974346932529578,
+            "Kernel": "rbf"
+        }
+    },
+    "Classification Results": {
+        "GridSearch_LogReg_KNN": {
+            "Classifier": "KNeighborsClassifier",
+            "Accuracy": 0.9721432632177374,
+            "F1_macro": 0.972057961376203,
+            "Kernel": "N/A"
+        },
+        "GridSearch_LDA_QDA_NB": {
+            "Classifier": "LinearDiscriminantAnalysis",
+            "Accuracy": 0.9357589539511085,
+            "F1_macro": 0.935811117008075,
+            "Kernel": "N/A"
+        },
+        "BayesSearch_SVM": {
+            "Classifier": "SVC",
+            "Accuracy": 0.9820920977828311,
+            "F1_macro": 0.982087155453646,
+            "Kernel": "rbf"
+        }
+    }
+}
