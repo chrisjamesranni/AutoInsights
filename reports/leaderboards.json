@@ -1,44 +1,78 @@
 {
     "Best Regressor": "TraditionalFamily",
     "Best Regressor Type": "KNeighborsRegressor",
-    "Best Regressor R\u00b2": 0.9745936434853288,
+    "Best Regressor R\u00b2": 0.9285194358193922,
     "Best Classifier": "BayesSearch_SVM",
     "Best Classifier Type": "SVC",
     "Best Classifier Accuracy": 0.9820920977828311,
     "Regression Results": {
         "TraditionalFamily": {
             "Regressor": "KNeighborsRegressor",
-            "RMSE": 5506.733321313023,
-            "MAE": 2964.112372382675,
-            "R2": 0.9745936434853288,
-            "Kernel": "N/A"
+            "RMSE": 9236.69996909318,
+            "MAE": 4376.554301149639,
+            "R2": 0.9285194358193922,
+            "Kernel": "N/A",
+            "Best_Params": {
+                "preprocessor__num__imputer": "SimpleImputer(strategy='median')",
+                "preprocessor__num__scaler": "MinMaxScaler()",
+                "regressor": "KNeighborsRegressor()",
+                "regressor__n_neighbors": 5,
+                "regressor__weights": "distance"
+            }
         },
         "SVR-Bayesian": {
             "Regressor": "SVR",
-            "RMSE": 5533.405568100223,
-            "MAE": 3069.244957549897,
-            "R2": 0.974346932529578,
-            "Kernel": "rbf"
+            "RMSE": 9442.482868108616,
+            "MAE": 5063.623031384637,
+            "R2": 0.925298949548046,
+            "Kernel": "rbf",
+            "Best_Params": {
+                "regressor": "SVR(cache_size=2000, max_iter=25000)",
+                "regressor__C": 23.9883291901949,
+                "regressor__coef0": 0.0,
+                "regressor__degree": 3,
+                "regressor__epsilon": 0.09,
+                "regressor__gamma": "scale"
+            }
         }
     },
     "Classification Results": {
         "GridSearch_LogReg_KNN": {
             "Classifier": "KNeighborsClassifier",
-            "Accuracy": 0.9721432632177374,
-            "F1_macro": 0.972057961376203,
-            "Kernel": "N/A"
+            "Accuracy": 0.9741330301307561,
+            "F1_macro": 0.9740561905642461,
+            "Kernel": "N/A",
+            "Best_Params": {
+                "clf": "KNeighborsClassifier()",
+                "clf__n_neighbors": 3,
+                "clf__weights": "distance",
+                "preprocessor__num__imputer": "SimpleImputer(strategy='median')",
+                "preprocessor__num__scaler": "StandardScaler()"
+            }
         },
         "GridSearch_LDA_QDA_NB": {
             "Classifier": "LinearDiscriminantAnalysis",
             "Accuracy": 0.9357589539511085,
             "F1_macro": 0.935811117008075,
-            "Kernel": "N/A"
+            "Kernel": "N/A",
+            "Best_Params": {
+                "clf": "LinearDiscriminantAnalysis()",
+                "clf__solver": "lsqr"
+            }
         },
         "BayesSearch_SVM": {
             "Classifier": "SVC",
             "Accuracy": 0.9820920977828311,
-            "F1_macro": 0.982087155453646,
-            "Kernel": "rbf"
+            "F1_macro": 0.982077983559465,
+            "Kernel": "rbf",
+            "Best_Params": {
+                "clf": "SVC(cache_size=2000, max_iter=25000, probability=True)",
+                "clf__C": 331.1733327754671,
+                "clf__coef0": 2.4823335179835837,
+                "clf__degree": 5,
+                "clf__gamma": "scale"
+            }
         }
-    }
+    },
+    "timestamp": "2025-11-14T20:11:50.643058"
 }
